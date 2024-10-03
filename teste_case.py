@@ -48,7 +48,7 @@ match servico:
 
             match servico_recorte:
                 case 1:
-                    print('O Valor é R$: 30.00')
+                    print('O Valor é R$: 40.00')
                       
                 case 2:
                     print('O Valor é R$: 20.00')
