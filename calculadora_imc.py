@@ -22,7 +22,7 @@ elif imc <= 24.9:
 elif imc == 25.0:   
     print('Você está com Sobrepeso')
 
-elif imc <=29.9:
+elif imc <= 29.9:
     print('Você está com Sobrepeso')
 
 else:
