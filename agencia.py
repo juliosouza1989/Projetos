@@ -8,9 +8,13 @@ servico = op
 match servico:
         case 1:
             print('Impressão Digital')             
-            papel = int(input('Entre com a quantidade de impressão: '))          
+            quantidade_papel = int(input('Entre com a quantidade de impressão: '))
 
-            valor_papel = papel * 8.0
+            if quantidade_papel >= 10:
+                 valor_papel = quantidade_papel * 6.0
+                 
+            else:          
+                valor_papel = quantidade_papel * 8.0
             print(f'O valor total de impressão é R$: {valor_papel:,.2f}')
         
         case 2:
@@ -72,12 +76,3 @@ match servico:
                 case 2:
                     print('O Valor é R$: 20.00')
                     
-
-            
-            
-
-  
-
-            
-
-         

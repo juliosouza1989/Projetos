@@ -23,7 +23,7 @@ elif imc == 25.0:
     print('Você está com Sobrepeso')
 
 elif imc <= 29.9:
-    print('Você está com Sobrepeso')
+    print('Você está com muito acima do peso')
 
 else:
     print('Você está com obesidade')
