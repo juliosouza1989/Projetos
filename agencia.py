@@ -51,12 +51,28 @@ match servico_op:
 
     case 2:
             print('Impressão Plotter')
-            op_plotter = int(input('\n 1-Adesivo \n 2-Banner \n 3-Perfurado \n Entre com a opção: '))
+            op_plotter = int(input('\n 1-Adesivo \n 2-Banner \n 3-Perfurado  \n 4-Papel \n Entre com a opção: \n\n' ))
             servico_1 = op_plotter
 
             match servico_1:
                 case 1:
                     print('Adesivo')
+                    altura_adesivo = float(input('Entre com a altura do adesivo '))
+                    largura_adesivo = float(input('Entra com a largura do adesivo '))
+
+                    tamanho_adesivo = altura_adesivo * largura_adesivo
+                    print(f'O tamanho do adesivo é: {tamanho_adesivo}')
+
+                    tamanho_m= 1.00
+
+                    if tamanho_adesivo <= tamanho_m:
+                          valor_total = 32.0
+                          print(f'Tamanho do adesivo entra no valor mínimo R$: {valor_total} \n')
+
+                    else:
+                          valor_total = tamanho_adesivo * 32.0
+                          print(f'Valor total do adesivo R$: {valor_total:,.2f}')
+                          
 
 #Caso 2 para calcular valor do Banner 
                       
@@ -95,13 +111,32 @@ match servico_op:
                         else:
                                 valor_total = tamanho_perfurado * 32.0
                                 print(f'O valor total do Adesivo perdurado R$: {valor_total}')
+
+                case 4:
+                        print('Papel')
+                        altura_papel = float(input('Entre com a altura do Papel: '))
+                        largura_papel = float(input('Entre com a largura do Papel: '))
+                        
+                        tamanho_total_papel = altura_papel * largura_papel
+                        print(f'O tamanho total do Papel é: {tamanho_total_papel}' )
+
+                        tamanho_papel_metro = 1.00
+                        if tamanho_total_papel <= tamanho_papel_metro:
+                                valor_total = 35.0
+                                print(f'O valor total do Papel R$: {valor_total:,.2f}')
+
+                        else:
+                                valor_total = tamanho_total_papel * 35.00
+                                print(f'O valor total do Papel é R$: {valor_total:,.2f}')                      
+
+
                                 
 #Caso 3 para opção de recorte             
 
     case 3:
             print('Recorte')
             
-            op_recorte = int(input('\n 1-Recorte Especial \n 2-Corte Reto \n Entre com a opção:'))
+            op_recorte = int(input('\n 1-Recorte Especial Adesivo \n 2-Recorte Especial Papel \n 3-Corte Reto \n Entre com a opção:'))
             servico_recorte = op_recorte
 
             match servico_recorte:
@@ -109,5 +144,8 @@ match servico_op:
                     print('O Valor é R$: 40.00')
                       
                 case 2:
+                    print('O Valor é R$: 45.00')
+
+                case 3:
                     print('O Valor é R$: 20.00')
 
